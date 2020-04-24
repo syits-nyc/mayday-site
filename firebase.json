@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "redirects": [
+      {
+        // Returns a permanent redirect to "/bar" for requests to "/foo" (but not "/foo/**")
+        "source": "/",
+        "destination": "https://www.twitch.tv/mmscibor",
+        "type": 301
+      }
+
+    ],
+
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true
+  }
+}

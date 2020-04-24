@@ -1,0 +1,217 @@
+
+.bg {
+    /* The image used */
+    background-image: url('./mayday-background-mobile.jpg');
+      /* Full height */
+    /* height: 100%;  */
+  
+    /* Center and scale the image nicely */
+   /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: 800px auto;   
+    
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+
+  .container {  
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+      "header"
+      "content"
+      "footer"
+  }
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 250px auto;
+  grid-template-areas: "masthead masthead" "tab tab" "tab tab";  
+}
+
+.content {
+  grid-area: content;
+  display: grid;
+  padding: 20px;
+  background-color: white;
+  opacity: 80%;
+  font-family: monospace;
+  font-size: large;
+  text-align: center;
+
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "about"
+    "donation-list"
+  ;
+}
+
+.content-schedule {
+  grid-area: content;
+  display: grid;
+  padding: 20px;
+  background-color: white;
+  opacity: 80%;
+  font-family: monospace;
+  font-size: large;
+  text-align: center;
+
+  grid-template-areas: 
+    "schedule"
+  ;
+
+}
+
+.schedule {
+  grid-area: schedule;
+}
+
+  .about {
+    grid-area: about;
+  }
+
+  .donation-list {
+    grid-area: donation-list;
+
+    display: grid;
+    grid-template-areas: "org-list" "artist-list";
+  }
+
+  .org-list {
+    grid-area: org-list;
+  }
+
+  .artist-list {
+    grid-area: artist-list;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;   
+  }
+  
+  .footer {
+    grid-area: footer;
+  }
+
+  .masthead {
+    grid-area: masthead;
+    grid-column: span 2;
+    display: grid;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 80px;
+    transform: skewY(-1.5deg);
+    padding-left: 50px;
+    justify-content: left;
+    align-content: center;
+    color: darkred;
+  }
+  
+  .tab {
+    /* grid-area: tab; */
+    display: grid;
+    font-family: 'IM Fell English SC', serif;
+    font-size: large;
+    /* padding: 70px;
+    padding-right: 50px;  */
+    transform: skewY(-1.5deg);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .tab a {
+    padding: 10px;
+    padding-right: 10px;
+    color: darkred;
+    text-decoration: none;
+    background-color: white;
+    opacity:80%;
+  }
+
+  @media (min-width: 800px) {
+    .container {  
+      display: grid;
+      grid-template-columns: auto; 
+      grid-template-rows: 250px 1fr 200px;
+      grid-template-areas: 
+        "header"
+        "content"
+        "footer"
+    }
+
+    .header {
+      grid-area: header;
+      display: grid;
+      grid-template-areas: "masthead  tab tab tab tab";  
+    }
+
+    .masthead {
+      grid-area: masthead;
+      display: grid;
+      font-family: 'IM Fell English SC', serif;
+      font-size: 80px;
+      transform: skewY(-1.5deg);
+      padding-left: 50px;
+      justify-content: left;
+      align-content: center;
+      color: darkred;
+    }
+
+    .content {
+      grid-area: content;
+      display: grid;
+      padding: 20px;
+      background-color: white;
+      opacity: 80%;
+      font-family: monospace;
+      font-size: large;
+      text-align: center;
+
+      grid-template-columns: 200px auto 200px;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        ". about ."
+        ". donation-list ."
+      ;
+    }
+
+    .content-schedule {
+      grid-area: content;
+      display: grid;
+      padding: 20px;
+      background-color: white;
+      opacity: 80%;
+      font-family: monospace;
+      font-size: large;
+      text-align: center;
+
+      grid-template-columns: 200px auto 200px;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        ". schedule ."
+      ;
+    }
+    
+    .schedule {
+      grid-area: schedule;
+    }
+
+    .donation-list {
+      grid-area: donation-list;
+      display: grid;
+      grid-template-areas: "org-list artist-list";
+    }
+
+    .bg {
+      background-image: url('./mayday-background-small.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+}
