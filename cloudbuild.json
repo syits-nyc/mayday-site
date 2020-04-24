@@ -1,0 +1,14 @@
+{
+  "steps": [
+   {
+      "name": "gcr.io/syits-mayday/firebase",
+      "args": [
+         "deploy",
+         "--project",
+         "syits-mayday",
+         "--only",
+         "hosting"
+       ]
+  }
+  ]
+}
