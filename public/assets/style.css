@@ -203,11 +203,11 @@
       grid-area: schedule;
     }
 
-    .donation-list {
+    /* .donation-list {
       grid-area: donation-list;
       display: grid;
       grid-template-areas: "org-list artist-list";
-    }
+    } */
 
     .bg {
       background-image: url('./mayday-background-small.jpg');
