@@ -214,4 +214,84 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+
+
+
+}
+
+.collapsible {
+  border: none;
+  outline: none;
+  background-color: unset;
+
+  font-family: monospace;
+  font-size: large;
+  text-align: center;
+
+  width: 300px;
+}
+
+.b2b {
+  display: none;
+  padding-top: 10px;
+  width: 300px;
+  grid-gap: 5px;
+  grid-template-areas: 
+    "artist artist"
+  ;
+}
+
+.solo {
+  display: none;
+  padding-top: 10px;
+  width: 300px;
+  grid-gap: 5px;
+  grid-template-areas: 
+    "artist"
+  ;
+}
+
+.artist {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-areas: 150px 130px;
+  grid-template-areas:
+    "artist-photo icons"
+}
+
+.artist-photo {
+  grid-area: artist-photo;
+}
+
+.artist-photo img {
+  width: 100px;
+}
+
+.icons {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-rows: repeat(3, 30px);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  vertical-align: middle;
+}
+
+/* #fb-icon {
+  background-image: url("fb_logo.png");
+}
+
+#sc-icon {
+  background-image: url("sc_logo.png");
+}
+
+#ra-icon {
+  background-image: url("ra_logo.png");
+} */
+
+.active, .collapsible:hover {
+  background-color: lightgray;
 }
